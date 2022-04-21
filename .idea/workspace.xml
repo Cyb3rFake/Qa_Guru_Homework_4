@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0e389e1-4444-4f0e-aba7-524833f1d6a3" name="Changes" comment="" />
+    <list default="true" id="c0e389e1-4444-4f0e-aba7-524833f1d6a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/guru/qa/utils/RandomValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/guru/qa/pages/RegistrationFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/guru/qa/pages/RegistrationFormPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/guru/qa/pages/components/CalendarComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/guru/qa/pages/components/CalendarComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/guru/qa/tests/Homework.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/guru/qa/tests/Homework.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/guru/qa/tests/RegistrationFormWithRandomUtilsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/guru/qa/tests/RegistrationFormWithRandomUtilsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/guru/qa/utils/RandomUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/guru/qa/utils/getFaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/guru/qa/utils/getFaker.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,18 +102,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringFormatExamples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="guru.qa.docs.StringFormatExamples" />
-      <module name="Qa_Guru_Homework_4.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="guru.qa.docs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Homework" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;guru.qa.tests.Homework&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="Homework.fillFieldsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -111,29 +139,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;guru.qa.tests.Homework.fillFieldsTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RegistrationFormWithFakerTests.fillFieldsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;guru.qa.tests.RegistrationFormWithFakerTests.fillFieldsTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -166,13 +171,36 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="getFaker.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;guru.qa.utils.getFaker.test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Homework.fillFieldsTest" />
+        <item itemvalue="Gradle.Homework" />
+        <item itemvalue="Gradle.getFaker.test" />
         <item itemvalue="Gradle.RegistrationFormWithPageObjectsTests.fillFieldsTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.StringFormatExamples" />
-        <item itemvalue="Gradle.RegistrationFormWithFakerTests.fillFieldsTest" />
       </list>
     </recent_temporary>
   </component>

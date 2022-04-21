@@ -1,15 +1,12 @@
 package guru.qa.tests;
 
 import com.codeborne.selenide.Configuration;
-import com.github.javafaker.Faker;
 import guru.qa.pages.RegistrationFormPage;
-import guru.qa.utils.RandomUtils;
 import guru.qa.utils.getFaker;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.Locale;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.closeWindow;
@@ -17,29 +14,38 @@ import static java.lang.String.format;
 
 public class Homework {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
-    getFaker f = new getFaker();
+    getFaker faker = new getFaker();
 
-    String  firstName = f.getFirstName(),
-            lastName = f.getLastName(),
-            fullName = format("%s %s",firstName, lastName),
-            email = f.getEmail(),
-            number = f.getNumber(),
-            currentAddress = f.getAddress();
+    String  firstName = faker.getFirstname,
+            lastName = faker.getLastname,
+            email = faker.getEmail,
+            currentAddress = faker.getAddress,
+            gender = faker.setRandomGenderType(),
+            subject = faker.setRandomSubject(),
+            hobby = faker.setRandomHobbies(),
+            state = "NCR",
+            city = "Noida",
+            dayOfBirth = faker.getDayOfBirth,
+            monthOfBirth = faker.getMonthOfBirth,
+            yearOfBirth = faker.getYearOfBirth,
+            phoneNumber = faker.getPhoneNumber,
+            imagePath = "img/Jdun.jpg",
 
-    RandomUtils randomUtils = new RandomUtils();
-    int rDay = randomUtils.getRandomInt(1,28);
-    int rYear = randomUtils.getRandomInt(1950,2022);
+            fullName = format("%s %s", firstName, lastName),
+            dateOfBirth = format("%s %s,%s", dayOfBirth, monthOfBirth, yearOfBirth),
+            fileName = imagePath.substring(4),
+            stateAndCity = format("%s %s", state, city);
 
     @BeforeAll
     static void setUP() {
         Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com/";
+        Configuration.baseUrl = "https://demoqa.com";
         Configuration.holdBrowserOpen = true;
     }
 
     @AfterAll
     static void closeAll() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(500);
         closeWindow();
         closeWebDriver();
     }
@@ -50,25 +56,27 @@ public class Homework {
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setEmail(email)
-                .setGender("Male")
-                .setNumber(number)
-                .setDateOfBirth("17", "December","2002")
-                .setHobies("Math", "Computer Science", "Reading")
-                .setUploadPicture("img/Jdun.jpg")
-                .setCurrentAddress(currentAddress)
-                .setState("NCR")
-                .setCity("Gurgaon")
+                .setGender(gender)
+                .setPhoneNumber(phoneNumber)
+                .setDate(dayOfBirth, monthOfBirth, yearOfBirth)
+                .setSubject(subject)
+                .setHobbies(hobby)
+                .setPath(imagePath)
+                .setAddress(currentAddress)
+                .setState(state)
+                .setCity(city)
                 .pressSubmit();
 
-        registrationFormPage.checkResultTable("Student Name", fullName)
+        registrationFormPage
+                .checkResultTable("Student Name", fullName)
                 .checkResultTable("Student Email", email)
-                .checkResultTable("Gender", "Male")
-                .checkResultTable("Mobile", number)
-                .checkResultTable("Date of Birth", "17 December,2002")
-                .checkResultTable("Subjects", "Maths, Computer Science")
-                .checkResultTable("Hobbies", "Reading")
-                .checkResultTable("Picture", "Jdun.jpg")
+                .checkResultTable("Gender", gender)
+                .checkResultTable("Mobile", phoneNumber)
+                .checkResultTable("Date of Birth", dateOfBirth)
+                .checkResultTable("Subjects", subject)
+                .checkResultTable("Hobbies", hobby)
+                .checkResultTable("Picture", fileName)
                 .checkResultTable("Address", currentAddress)
-                .checkResultTable("State and City", "NCR Gurgaon");
+                .checkResultTable("State and City", stateAndCity);
     }
 }

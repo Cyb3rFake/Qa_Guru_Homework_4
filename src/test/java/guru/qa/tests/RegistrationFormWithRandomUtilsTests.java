@@ -39,21 +39,13 @@ public class RegistrationFormWithRandomUtilsTests {
         open("automation-practice-form");
 
         $("#firstName").setValue(firstName);
-
         $("#lastName").setValue(lastName);
-
         $("#userEmail").setValue(email);
-
         $("#genterWrapper").$(byText("Male")).click();
-
         $("#userNumber").setValue(mobile);
-
         $("#dateOfBirthInput").click();
-
         $(".react-datepicker__month-select").selectOption("December");
-
         $(".react-datepicker__year-select").selectOption("2002");
-
         $("[aria-label$='December 17th, 2002']").click();
         $("#subjectsInput").setValue("Math").pressEnter();
         $("#subjectsInput").setValue("Computer Science").pressEnter();
